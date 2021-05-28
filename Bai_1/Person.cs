@@ -46,6 +46,8 @@ namespace Bai_1
 
         public decimal? PersonIncome { get; set; }
 
+        public double TaxCoe { get; set; }
+
         public override bool Equals(object obj)
         {
             return Equals(obj as Person);
