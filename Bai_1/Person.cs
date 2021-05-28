@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bai_1
 {
-    public class Person
+    public class Person : IEquatable<Person>
     {
         public Person() { }
 
@@ -46,5 +46,15 @@ namespace Bai_1
 
         public decimal? PersonIncome { get; set; }
 
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Person);
+        }
+
+        public bool Equals(Person other)
+        {
+            return other != null &&
+                   PersonId == other.PersonId;
+        }
     }
 }
