@@ -64,5 +64,18 @@ namespace Bai_1Test
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void EqualsValid()
+        {
+            //-- Arrange
+            var expected = new Person(123);
+
+            //-- Act
+            var actual = new Person(123);
+
+            //-- Assert
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
