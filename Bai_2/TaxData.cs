@@ -7,7 +7,21 @@ using System.Threading.Tasks;
 
 namespace Bai_2
 {
-    public static class TaxData
+    public static partial class TaxData
+    {
+        public static List<Person> PersonList { get; } =
+            new List<Person>
+            {
+                new Person(001) { FirstName = "Trung", LastName = "Nguyen Bao", PersonAge = 16, PersonIncome = 2_600_000M },
+                new Person(002) { FirstName = "Ha", LastName = "Nguyen Thu", PersonAge = 22, PersonIncome = 7_600_000M },
+                new Person(003) { FirstName = "Lam", LastName = "Tran Dinh", PersonAge = 28, PersonIncome = 12_350_000M },
+                new Person(004) { FirstName = "Quang", LastName = "Nguyen Minh", PersonAge = 31, PersonIncome = 17_500_000M },
+                new Person(005) { FirstName = "Khanh", LastName = "Le Bao", PersonAge = 27, PersonIncome = 22_760_000M }
+            };
+
+    }
+
+    public static partial class TaxData
     {
         public static double GetTaxCoe(Person p)
         {
@@ -27,5 +41,7 @@ namespace Bai_2
 
             return taxCoe;
         }
+
     }
+
 }
