@@ -21,5 +21,18 @@ namespace Bai_1
             return people;
         }
 
+        public static void Output()
+        {
+            var InputPeople = Init();
+            foreach (var person in InputPeople)
+            {
+                Console.WriteLine($"The Id: {person.PersonId} \t|\t Full Name: {person.FullName} \t|\t Tax: {person.GetTax():C0}");
+            }
+        }
+
+        static void Main()
+        {
+            Output();
+        }
     }
 }
