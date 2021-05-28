@@ -58,5 +58,15 @@ namespace Bai_1
             return other != null &&
                    PersonId == other.PersonId;
         }
+
+        public decimal? GetTax(decimal? personIncome, double taxCoe)
+        {
+            PersonIncome = personIncome;
+            TaxCoe = taxCoe;
+
+            var personalIncomeTax = PersonIncome * Convert.ToDecimal(TaxCoe);
+
+            return personalIncomeTax;
+        }
     }
 }
