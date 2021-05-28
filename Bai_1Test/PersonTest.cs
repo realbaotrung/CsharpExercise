@@ -77,5 +77,23 @@ namespace Bai_1Test
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void GetTaxValid()
+        {
+            //-- Arrange
+            var person = new Person()
+            {
+                PersonIncome = 3_500_000M,
+                TaxCoe = 0.05
+            };
+
+            var expected = 175_000M;
+
+            //-- Act
+            var actual = person.GetTax(3_500_000M, 0.05);
+
+            //-- Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
