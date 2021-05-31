@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="NameBaseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoggingInfoTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bai_3\Bai_3.csproj">

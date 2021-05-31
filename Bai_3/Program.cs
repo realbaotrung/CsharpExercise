@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bai_3.DataSource;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,31 @@ namespace Bai_3
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            // Print out the number of students with each student information
+            var studentList = StudenData.StudentList;
+            Console.WriteLine($"Number of Students: {studentList.Count}");
+            LoggingInfo.WriteToConsole(studentList);
+
+            // Print out the number of teachers with each teacher information
+            var teacherList = TeacherData.TeacherList;
+            foreach (var t in teacherList)
+            {
+                t.TaxCoe = TaxData.GetTaxCoe(t);
+            }
+            Console.WriteLine($"Number of Teachers: {teacherList.Count}");
+            LoggingInfo.WriteToConsole(teacherList);
+
+            // Print out the number of employees with each employee information
+            var employeeList = EmployeeData.EmployeeList;
+            foreach (var e in employeeList)
+            {
+                e.TaxCoe = TaxData.GetTaxCoe(e);
+            }
+            Console.WriteLine($"Number of Employees: {employeeList.Count}");
+            LoggingInfo.WriteToConsole(employeeList);
+
         }
     }
 }
