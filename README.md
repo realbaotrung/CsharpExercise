@@ -83,4 +83,4 @@ với các **_property_** sau:
 &nbsp;&nbsp;&nbsp;&nbsp;_ID_Name_Age_School_Income_Tax
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Employee**: _Số_Lượng_
-&nbsp;&nbsp;&nbsp;&nbsp;_ID_Name_Age_School_JobTitle_Income_Tax
+&nbsp;&nbsp;&nbsp;&nbsp;_ID_Name_Age_Company_JobTitle_Income_Tax
