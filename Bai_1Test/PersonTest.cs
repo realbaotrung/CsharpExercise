@@ -78,7 +78,7 @@ namespace Bai_1Test
         }
 
         [TestMethod]
-        public void GetTaxValid()
+        public void GetTaxWithoutParamValid()
         {
             //-- Arrange
             var person = new Person()
@@ -86,6 +86,21 @@ namespace Bai_1Test
                 PersonIncome = 3_500_000M,
                 TaxCoe = 0.05
             };
+
+            var expected = 175_000M;
+
+            //-- Act
+            var actual = person.GetTax();
+
+            //-- Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetTaxWithParamValid()
+        {
+            //-- Arrange
+            var person = new Person();
 
             var expected = 175_000M;
 
