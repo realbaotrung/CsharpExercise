@@ -10,7 +10,7 @@ namespace Bai_3
     {
         int Id { get; set; }
 
-        string Name { get; set; }
+        string Name { get; }
 
         int Age { get; set; }
 
