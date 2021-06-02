@@ -12,12 +12,12 @@ namespace Bai_3
         static void Main()
         {
             // Print out the number of students with each student information
-            var studentList = StudenData.StudentList;
+            var studentList = StudenData.StudentList.ToList();
             Console.WriteLine($"Number of Students: {studentList.Count}");
             LoggingInfo.WriteToConsole(studentList);
 
             // Print out the number of teachers with each teacher information
-            var teacherList = TeacherData.TeacherList;
+            var teacherList = TeacherData.TeacherList.ToList();
             foreach (var t in teacherList)
             {
                 t.TaxCoe = TaxData.GetTaxCoe(t);
@@ -26,7 +26,7 @@ namespace Bai_3
             LoggingInfo.WriteToConsole(teacherList);
 
             // Print out the number of employees with each employee information
-            var employeeList = EmployeeData.EmployeeList;
+            var employeeList = EmployeeData.EmployeeList.ToList();
             foreach (var e in employeeList)
             {
                 e.TaxCoe = TaxData.GetTaxCoe(e);

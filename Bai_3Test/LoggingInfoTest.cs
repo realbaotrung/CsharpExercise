@@ -3,6 +3,7 @@ using Bai_3.DataSource;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Bai_3Test
 {
@@ -60,15 +61,15 @@ namespace Bai_3Test
         {
             //-- Arrange
 
-            var studentList = StudenData.StudentList;
+            var studentList = StudenData.StudentList.ToList();
 
-            var teacherList = TeacherData.TeacherList;
+            var teacherList = TeacherData.TeacherList.ToList();
             foreach (var t in teacherList)
             {
                 t.TaxCoe = TaxData.GetTaxCoe(t);
             }
 
-            var employeeList = EmployeeData.EmployeeList;
+            var employeeList = EmployeeData.EmployeeList.ToList();
             foreach (var e in employeeList)
             {
                 e.TaxCoe = TaxData.GetTaxCoe(e);

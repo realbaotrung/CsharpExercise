@@ -8,7 +8,7 @@ namespace Bai_3.DataSource
 {
     public static class StudenData
     {
-        public static List<IPerson> StudentList =
+        public static IEnumerable<IPerson> StudentList =
             new List<IPerson>
             {
                 new Student(001) { FirstName = "Trung", LastName = "Tran The", Age = 16, School = "Phan Dinh Phung", ClassOfSchool = "10A1" },
